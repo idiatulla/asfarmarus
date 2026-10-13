@@ -8,16 +8,37 @@
 <link rel="icon" href="favicon-192x192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
-  html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; }
-  .map { position: relative; overflow: hidden; width: 100vw; height: 100vh; height: 100dvh; }
+  html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; font-family: Arial, Helvetica, sans-serif; }
+  .wrap { display: flex; gap: 10px; width: 100vw; height: 100vh; height: 100dvh; box-sizing: border-box; }
+  .half { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; }
+  .half h2 { margin: 0; padding: 12px 8px; text-align: center; font-size: 22px; }
+  .map { position: relative; overflow: hidden; flex: 1 1 auto; width: 100%; }
   .map iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+  @media (max-width: 700px) {
+    .wrap { flex-direction: column; }
+    .half h2 { font-size: 18px; padding: 8px; }
+  }
 </style>
 </head>
 <body>
-<div class="map">
-  <a href="https://yandex.ru/maps/org/asfarma_ros/1336259256/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Асфарма-Рос</a>
-  <a href="https://yandex.ru/maps/43/kazan/category/logistics_company/184108185/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Логистическая компания в Казани</a>
-  <iframe src="https://yandex.ru/map-widget/v1/?ll=49.067212%2C55.806611&mode=search&oid=1336259256&ol=biz&z=17.53" allowfullscreen="true"></iframe>
+<div class="wrap">
+  <div class="half">
+    <h2>Представительство в Казани</h2>
+    <div class="map">
+      <a href="https://yandex.ru/maps/org/asfarma_ros/1336259256/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Асфарма-Рос</a>
+      <a href="https://yandex.ru/maps/43/kazan/category/logistics_company/184108185/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Логистическая компания в Казани</a>
+      <iframe src="https://yandex.ru/map-widget/v1/?ll=49.067212%2C55.806611&mode=search&oid=1336259256&ol=biz&z=17.53" allowfullscreen="true"></iframe>
+    </div>
+  </div>
+  <div class="half">
+    <h2>Представительство в Москве</h2>
+    <div class="map">
+      <a href="https://yandex.ru/maps/org/asfarma/62325676759/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Asfarma</a>
+      <a href="https://yandex.ru/maps/213/moscow/category/pharmaceutical_company/184105944/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Фармацевтическая компания в Москве</a>
+      <a href="https://yandex.ru/maps/213/moscow/category/medical_equipment/184106044/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Медицинское оборудование, медтехника в Москве</a>
+      <iframe src="https://yandex.ru/map-widget/v1/?ll=37.550225%2C55.803611&mode=search&oid=62325676759&ol=biz&z=17" allowfullscreen="true"></iframe>
+    </div>
+  </div>
 </div>
 </body>
 </html>
